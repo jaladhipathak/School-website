@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>activity corner</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet prefetch" href="nav.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald" rel="stylesheet">
+<style>
+	* {
+  margin: 0px;
+  padding: 0px;
+}
+h2
+{
+margin-top:2px;    
+margin-left:65px;
+    margin-bottom:15px;
+    font-size:500%;
+    color:#ffffff;
+	font-family: 'Lobster Two', cursive;	
+}
+
+body {
+  background: -webkit-linear-gradient(#363437, #121112);
+  background: linear-gradient(#363437, #121112);
+}
+.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2E1C05;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+#top-social-menu {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 25px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  #top-social-menu {
+    display: initial;
+  }
+
+  /* Navbar when scrolled */
+
+  .navbar-scroll {
+    height: 92px;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="homepage.php"><img src="logo.png" style="margin-top: 10px"></a>
+        <img src="logo3.png" style="width: 587px;height: 55px; margin-left: 17px; margin-top: 30px;">
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="homepage.php">Home</a></li>
+            <li><a href="abt_us.html">About Us</a></li>
+            <li><a href="faculty.htm">Faculty</a></li>
+            <li><a href="con_us.html">Contact Us</a></li>
+            <li><a href="student activity corner.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script>
+    $(window).scroll(function () {
+  var sc = $(window).scrollTop()
+  if (sc > 150) {
+    $("#main-navbar").addClass("navbar-scroll")
+  } 
+  else {
+    $("#main-navbar").removeClass("navbar-scroll")
+  }
+});
+</script>
+<h2 style="margin-top: 120px;">Activity Corner</h2>
+<br>
+<center>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000"  style="width: 1360px; height: 768px">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    <li data-target="#myCarousel" data-slide-to="4"></li>
+    <li data-target="#myCarousel" data-slide-to="5"></li>
+    <li data-target="#myCarousel" data-slide-to="6"></li>
+	<li data-target="#myCarousel" data-slide-to="7"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+   <div class="item active">
+      <img src="data/activity corner/Vruksharopan.jpg" alt="Flower">
+      <div class="carousel-caption">
+		  <h1>Vruksharopan</h1>
+      </div>
+    </div>
+    
+    <div class="item">
+      <img src="data/activity corner/joy of giving.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h1>Joy of Giving</h1>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="data/activity corner/Rakshabandhan.JPG" alt="Chania">
+      <div class="carousel-caption">
+        <h1>Rakshabandhan Celebration</h1>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="data/activity corner/disaster management.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h1>Disaster Management</h1>
+      </div>
+    </div>
+    
+     <div class="item">
+      <img src="data/activity corner/holi.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h1>Holi Celebration</h1>
+      </div>
+    </div>
+    
+     <div class="item">
+      <img src="data/activity corner/essay competition.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h1>Essay Competition</h1>
+      </div>
+    </div>
+    
+     <div class="item">
+      <img src="data/activity corner/photography exibition.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h1>Photography Exhibition</h1>
+      </div>
+    </div>
+    
+     <div class="item">
+      <img src="data/activity corner/matrubhasha divas.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h1>Matrubhasha Divas</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</center>
+</body>
+</html>

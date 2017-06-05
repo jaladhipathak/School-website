@@ -1,0 +1,165 @@
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./font-awesome.min.css">
+<link rel="stylesheet" href="./css">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  <link rel="stylesheet prefetch" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="con_us.css">;
+ <style>
+.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+	position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2E1C05;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+#top-social-menu {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 25px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  #top-social-menu {
+    display: initial;
+  }
+
+  /* Navbar when scrolled */
+
+  .navbar-scroll {
+    height: 92px;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+		<nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+			<div class="container navbar-container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="homepage.php"><img src="logo.png" style="margin-top: 10px"></a>
+				<img src="logo3.png" style="width: 587px;height: 55px; margin-left: 17px; margin-top: 30px;">
+        </div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="homepage.php">Home</a></li>
+						<li><a href="abt_us.html">About Us</a></li>
+						<li><a href="faculty.htm">Faculty</a></li>
+						<li><a href="con_us.html">Contact Us</a></li>
+            <li><a href="student activity corner.html">Gallery</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+<script>
+    $(window).scroll(function () {
+	var sc = $(window).scrollTop()
+	if (sc > 150) {
+		$("#main-navbar").addClass("navbar-scroll")
+	} 
+	else {
+		$("#main-navbar").removeClass("navbar-scroll")
+	}
+});
+</script>
+<h1 style="margin-top: 100px;">
+About Us
+</h1>
+<p>This institute was founded in Bhavnagar ( western part of India ) in 1910 by Nanabhai Bhatt. With passage of time Harbhai Trivedi & Gijubhai Badheka also joined the institution. This institute was started in very small two rooms of Takhtsinhji Dharmshala during the period of Maharaja Bhavsinhji. Today this institute has seven different educational departments. That indicates the progress of this institute. One of the department of this institute is SHRI DAKSHINAMURTI VINAY MANDIR, which was established in 1973. In the beginning, it was a very small unit. With passage of time it has developed in a big way. After the introduction of Higher Secondary section Dakshinamurti Vinay Mandir is developed into very big unit (At the present there are four classes of each standard 8 to 10. There are four classes of each standard 11 & 12 of General Stream & Science Stream.).</p></center>
+</body>
+</html>

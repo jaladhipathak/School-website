@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>faculty</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./font-awesome.min.css">
+<link rel="stylesheet" href="./css">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  <link rel="stylesheet prefetch" href="nav.css">
+<style type="text/css">
+	.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.navbar-container {
+  position: relative;
+}
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2E1C05;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.navbar-brand {
+  font-size: 25px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.navbar-scroll {
+  opacity: 1;
+}
+#top-social-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 25px;
+    line-height: 70px;
+  }
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+  #top-social-menu {
+    display: initial;
+  }
+  /* Navbar when scrolled */
+  .navbar-scroll {
+    height: 92px;
+  }
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+</style>
+<style type="text/css">
+	.card-flip {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.card-flip:hover .flip, .card-flip.hover .flip {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card-flip,
+.front,
+.back {
+  width: 320px;
+  height: 480px;
+}
+.flip {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+	* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #05182d;
+}
+@-webkit-keyframes backgroundAnimate {
+  from {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -10000px;
+    top: -2000px;
+  }
+}
+@-moz-keyframes backgroundAnimate {
+  from {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -10000px;
+    top: -2000px;
+  }
+}
+@-o-keyframes backgroundAnimate {
+  from {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -10000px;
+    top: -2000px;
+  }
+}
+@keyframes backgroundAnimate {
+  from {
+    left: 0;
+    top: 0;
+  }
+  to {
+    left: -10000px;
+    top: -2000px;
+  }
+}
+#back {
+  background: url(http://www.tranexnet.com/img/back.png) repeat 20% 20%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  z-index: -1;
+  -webkit-animation-name: backgroundAnimate;
+  -webkit-animation-duration: 500s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: backgroundAnimate;
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-name: backgroundAnimate;
+  -o-animation-duration: 500s;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  animation-name: backgroundAnimate;
+  animation-duration: 500s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#front {
+  background: url(http://www.tranexnet.com/img/front.png) repeat 35% 35%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  z-index: -1;
+  -webkit-animation-name: backgroundAnimate;
+  -webkit-animation-duration: 300s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: backgroundAnimate;
+  -moz-animation-duration: 300s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-name: backgroundAnimate;
+  -o-animation-duration: 300s;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: infinite;
+  animation-name: backgroundAnimate;
+  animation-duration: 300s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+h1
+{
+margin-top:2px;    
+margin-left:65px;
+    margin-bottom:15px;
+    font-size:450%;
+    color:#ffffff;
+	font-family: 'Lobster Two', cursive;	
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body>
+ <header>
+    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="logo.png" style="margin-top: 10px"></a>
+        <img src="logo3.png" style="width: 587px;height: 55px; margin-left: 17px; margin-top: 30px;">
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="abt_us.html">About Us</a></li>
+            <li><a href="../facultyfinal.htm">Faculty</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="con_us.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div id="back"></div>
+<div id="front"></div>
+<h1 style="margin-top: 120px;">Faculty</h1>
+<div class="row" style="margin-left: 20px; margin-top: 20px;">
+<div class="card-deck">
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<div class="card p-1">
+							  <img class="card-img-top" src="data/faculties/bhavnabhatt.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Bhavna I Bhatt</h3>
+								  <h5>Principal</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<div class="card p-1">
+							  <div class="card-block">
+						    <h4 class="card-title">Bhavna I Bhatt</h4>
+							    <ul class="list-group list-group-flush">
+									<li class="list-group-item">Principal</li>
+									<li class="list-group-item">Qualification: B.sc.,B.ed.,HTAT,TAT,TET</li>
+									<li class="list-group-item">Subject: Mathematics</li>
+									<li class="list-group-item">Experiance: 17 years</li>
+								 </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/chetanbhai chauhan.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Chetan C Chauhan</h3>
+								  <h5>Supervisor</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						    <h4 class="card-title">Chetan C Chauhan</h4>
+							    <ul class="list-group list-group-flush">
+								  <li class="list-group-item">Supervisor</li>
+								<li class="list-group-item">Qualification: LLB, MBA</li>
+								<li class="list-group-item">Subjects: Statistics</li>
+								<li class="list-group-item">Experiance: 7 years</li>
+									</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/falguni pandya.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Falguni N Pandya</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						    <h4 class="card-title">Falguni N Pandya</h4>
+							    <ul class="list-group list-group-flush">
+								  <li class="list-group-item">Teacher</li>
+								<li class="list-group-item">Qualification: MA,B.Ed.</li>
+								<li class="list-group-item">Subjects: Gujarati, Hindi, Sanskrit</li>
+								<li class="list-group-item">Experiance: 3 years</li>
+							  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/jayesh h utani.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Jayesh H Utani</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						   <h4 class="card-title">Jayesh H Utani</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher</li>
+							<li class="list-group-item">Qualification: B.E.(Mechanical)</li>
+							<li class="list-group-item">Subjects: Mathematics, Science</li>
+							<li class="list-group-item">Experiance: 3 years</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  </div>
+  <div class="row" style="margin-left: 5px;margin-top: 20px;">
+<div class="card-deck">
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1">
+							  <img class="card-img-top" src="data/faculties/pratikbhai rajyaguru.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Pratik N Rajyaguru</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1">
+							  <div class="card-block">
+						   <h4 class="card-title">Pratik N Rajyaguru</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher (Visiting)</li>
+							<li class="list-group-item">Qualification: MA, B.Ed.</li>
+							<li class="list-group-item">Subject: Gujarati</li>
+							<li class="list-group-item">Experiance: 6 years</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/mansiben bhatt.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Mansi N Bhatt</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						   <h4 class="card-title">Mansi N Bhatt</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher</li>
+							<li class="list-group-item">Qualification: BA, B.Ed.,TAT</li>
+							<li class="list-group-item">Subjects: English </li>
+							<li class="list-group-item">Experiance: 1 year </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+ <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/parthivbhai trivedi.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Parthiv B Trivedi</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						   <h4 class="card-title">Parthiv B Trivedi</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher (Visiting)</li>
+							<li class="list-group-item">Qualification: M.Com., B.Ed., MSW, TAT</li>
+							<li class="list-group-item">Subjects: Accounts</li>
+							<li class="list-group-item">Experiance: 14 years</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/jainaben j Devmurari.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Jaina J Devmurari</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						   <h4 class="card-title">Jaina J Devmurari</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher</li>
+							<li class="list-group-item">Qualification: B.E.(Mechanical)</li>
+							<li class="list-group-item">Subjects: Accounts, Economics, Social Science</li>
+							<li class="list-group-item">Experiance: 1 year</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  </div>
+  </div>
+  <div class="row-flush" style="margin-left: 1px;margin-top: 20px;margin-right: 600px">
+  <div class="card-deck">
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1">
+							  <img class="card-img-top" src="data/faculties/shaileshbhai.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Shailesh Pandya</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1">
+							  <div class="card-block">
+						   <h4 class="card-title">Shailesh Pandya</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher(Visiting)</li>
+							<li class="list-group-item">Qualification: MA, B.Ed.</li>
+							<li class="list-group-item">Subject: English</li>
+							<li class="list-group-item">Experiance: 10 years</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  <div class="card-flip">
+					<div class="flip">
+						<div class="front">
+							<!-- front content -->
+							<div class="card p-1"  style="margin-left: 15px">
+							  <img class="card-img-top" src="data/faculties/krunalbhai masani.jpeg" alt="100%x180" data-holder-rendered="true">
+							  <div class="card-block">
+								  <h3 class="card-title">Krunal masani</h3>
+								  <h5>Teacher</h5>
+							
+
+							  </div>
+							</div>
+						</div>
+						<div class="back">
+							<!-- back content -->
+							<div class="card p-1" style="margin-left: 15px">
+							  <div class="card-block">
+						   <h4 class="card-title">Krunal masani</h4>
+							  <ul class="list-group list-group-flush">
+							  <li class="list-group-item">Teacher(Visiting)</li>
+							<li class="list-group-item">Qualification: MA, B.Ed.</li>
+							<li class="list-group-item">Subject: Gujarati</li>
+							<li class="list-group-item">Experiance: 7 years</li>
+						  </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+        		<!-- End Card Flip -->
+			</div>
+  </div>
+  </div>
+	</div>
+	<script src="./stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js.download"></script>
+
+  <script src="./jquery.min.js.download"></script>
+<script src="./bootstrap.min.js.download"></script>
+
+    <script>
+    $(window).scroll(function () {
+  var sc = $(window).scrollTop()
+  if (sc > 150) {
+    $("#main-navbar").addClass("navbar-scroll")
+  } 
+  else {
+    $("#main-navbar").removeClass("navbar-scroll")
+  }
+});
+  </script>
+</body>
+</html>

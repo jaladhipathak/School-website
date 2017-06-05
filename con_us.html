@@ -1,0 +1,205 @@
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./font-awesome.min.css">
+<link rel="stylesheet" href="./css">
+  
+  <link rel="stylesheet" href="./normalize.min.css">
+
+  <link rel="stylesheet prefetch" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="con_us.css">
+
+<style>
+.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2E1C05;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+#top-social-menu {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 25px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  #top-social-menu {
+    display: initial;
+  }
+
+  /* Navbar when scrolled */
+
+  .navbar-scroll {
+    height: 92px;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+/* # Hover Link Effect
+================================ */
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+</style>
+ <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+  <header>
+    <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="homepage.php"><img src="logo.png" style="margin-top: 10px"></a>
+        <img src="logo3.png" style="width: 587px;height: 55px; margin-left: 17px; margin-top: 30px;">
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="homepage.php">Home</a></li>
+            <li><a href="abt_us.html">About Us</a></li>
+            <li><a href="faculty.htm">Faculty</a></li>
+            <li><a href="con_us.html">Contact Us</a></li>
+            <li><a href="student activity corner.html">Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<h1 style="margin-top: 120px;">
+Contact Us
+</h1>
+<ul style="none">
+  <li div class="floating-box" style="margin-left: 100px;">Principal:<ul><li div class="float">(O): 0278-2423939</li><li div class="float">(M): 9426171413</li></ul></div></li>
+  <li div class="floating-box">Co-ordinator:<ul><li div class="float">(M): 9374868736</li><li div class="float"><br></li></ul></div></li>
+  <li div class="floating-box">Director:</center><ul><li div class="float">(O): 0278-2423939</li><li div class="float"><br></li></ul></div></li>
+</ul>
+<center>
+ <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 21.762487, lng: 72.145325};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP_UB9BFbeFMEEfbL83FZp-mRnVhruFhY&callback=initMap">
+    </script>
+<div class="box">
+<h2>Shri Daxinamurti Gijubhai Vinay Mandir</h2>
+<h3>Satyanarayan Road, Near Kalakshetra, Parimal, Bhavnagar.</h3></div></center>
+ <script src="./stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js.download"></script>
+
+  <script src="./jquery.min.js.download"></script>
+<script src="./bootstrap.min.js.download"></script>
+
+    <script>
+    $(window).scroll(function () {
+  var sc = $(window).scrollTop()
+  if (sc > 150) {
+    $("#main-navbar").addClass("navbar-scroll")
+  } 
+  else {
+    $("#main-navbar").removeClass("navbar-scroll")
+  }
+});
+  </script>
+</body>
+</html>

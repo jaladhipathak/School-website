@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert News</title>
+<style>
+	
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+   background: -webkit-linear-gradient(#363437, #121112);
+  background: linear-gradient(#363437, #121112);
+}
+
+	
+	input[type=text], input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+	h2
+{  
+text-align:center;
+    padding-top:50px;
+    font-size:350%;
+    color:#010433;
+	font-family: 'Lobster Two', cursive;	
+}
+</style>
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Oswald" rel="stylesheet">
+<script>
+
+	function a()
+	{
+		document.getElementById("f").reset();
+	}
+	
+</script>
+</head>
+
+<body onLoad="a()">
+<div style="width: 600px;height: 414px;margin: 50px 450px 100px 450px;background-color: white!important;display: block" name="abc">
+<h2>Enter The News</h2>
+<form action="newsinsert.php" method="post" id="f">
+	<center>
+	<table style="margin-top: 7%" cellpadding="10px">
+	<tr>
+		<td style="font-family: Baskerville, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, serif;font-size: 18px;padding-right: 5px">Enter Date:-</td>
+		<td><input type="date" name="d"></td>
+	</tr>
+	<tr>
+	<td style="font-family: Baskerville, Palatino Linotype, Palatino, Century Schoolbook L, Times New Roman, serif;font-size: 18px;padding-right: 8px">Enter News:-</td>
+	<td><input type="text" name="news"></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><input type="submit"></td>
+	</tr>
+	</table>
+	</center>
+</form>
+</div>
+</body>
+</html>
